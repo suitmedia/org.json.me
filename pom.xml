@@ -6,9 +6,6 @@
 	<groupId>org.json.me</groupId>
 	<artifactId>json</artifactId>
 	<version>1.0</version>
-	<organization>
-		<name>Douglas Crockford</name>
-	</organization>
 	<build>
 		<plugins>
 			<plugin>
@@ -28,7 +25,6 @@
 						<manifestEntries>
 							<MIDlet-1>,,</MIDlet-1>
 							<MIDlet-Name>${project.artifactId}</MIDlet-Name>
-							<MIDlet-Vendor>${project.organization.name}</MIDlet-Vendor>
 							<MIDlet-Version>${project.version}</MIDlet-Version>
 							<MicroEdition-Configuration>CLDC-1.1</MicroEdition-Configuration>
 							<MicroEdition-Profile>MIDP-2.0</MicroEdition-Profile>
