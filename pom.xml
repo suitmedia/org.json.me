@@ -19,21 +19,56 @@
 					</compilerArguments>
 				</configuration>
 			</plugin>
-			<plugin>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.3.1</version>
-				<configuration>
-					<archive>
-						<manifestEntries>
-							<MIDlet-1>,,</MIDlet-1>
-							<MIDlet-Name>${project.artifactId}</MIDlet-Name>
-							<MIDlet-Version>${project.version}</MIDlet-Version>
-							<MicroEdition-Configuration>CLDC-1.1</MicroEdition-Configuration>
-							<MicroEdition-Profile>MIDP-2.0</MicroEdition-Profile>
-						</manifestEntries>
-					</archive>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
+	<profiles>
+		<!--
+			Refer to https://github.com/upictec/org.json.me/wiki/Apache-Maven for
+			details
+		-->
+		<profile>
+			<id>blackberryos</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-jar-plugin</artifactId>
+						<version>2.3.1</version>
+						<configuration>
+							<archive>
+								<manifestEntries>
+									<MIDlet-1>,,</MIDlet-1>
+									<MIDlet-Name>${project.artifactId}</MIDlet-Name>
+									<MIDlet-Version>${project.version}</MIDlet-Version>
+									<MicroEdition-Configuration>CLDC-1.1</MicroEdition-Configuration>
+									<MicroEdition-Profile>MIDP-2.0</MicroEdition-Profile>
+								</manifestEntries>
+							</archive>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>javame</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-jar-plugin</artifactId>
+						<version>2.3.1</version>
+						<configuration>
+							<archive>
+								<manifestEntries>
+									<MIDlet-1>,,</MIDlet-1>
+									<MIDlet-Name>${project.artifactId}</MIDlet-Name>
+									<MIDlet-Version>${project.version}</MIDlet-Version>
+									<MicroEdition-Configuration>CLDC-1.1</MicroEdition-Configuration>
+									<MicroEdition-Profile>MIDP-2.0</MicroEdition-Profile>
+								</manifestEntries>
+							</archive>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
